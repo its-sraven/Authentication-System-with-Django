@@ -76,12 +76,18 @@ WSGI_APPLICATION = 'auth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'yt_django_auth',
-        'USER': 'root',
-        'PASSWORD': 'rootroot'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'auth_db',
+        'USER': 'postgres', 
+        'PASSWORD': 'Password@123',  
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# AUTH_USER_MODEL = 'users.CustomUser'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
